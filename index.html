@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Funcionario</title>
+    <link rel="styleheet" href="style.css">
+</head>
+<style>
+    body{
+        background-color: rgb(102, 207, 129);
+        margin-left: 51px;
+    }   
+    .container {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    position: relative;
+  }
+  
+  .container .label {
+    font-size: 15px;
+    padding-left: 10px;
+    position: absolute;
+    top: 13px;
+    transition: 0.3s;
+    pointer-events: none;
+  }
+  
+  .input {
+    width: 200px;
+    height: 45px;
+    border: none;
+    outline: none;
+    padding: 0px 7px;
+    border-radius: 6px;
+    color: #000000;
+    font-size: 15px;
+    background-color: transparent;
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4);
+  }
+  
+  .input:focus {
+    border: 2px solid transparent;
+    color: #000000;
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4),
+    inset 3px 3px 10px rgba(0,0,0,1),
+    inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+  }
+  
+  .container .input:valid ~ .label,
+  .container .input:focus ~ .label {
+    transition: 0.3s;
+    padding-left: 2px;
+    transform: translateY(-35px);
+  }
+  
+  .container .input:valid,
+  .container .input:focus {
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4),
+    inset 3px 3px 10px rgba(0,0,0,1),
+    inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+  }
+
+  .radio-button {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+
+  gap: 0px;
+  margin: 0px;
+  position: relative;
+  align-items: center;
+}
+
+.radio-button input[type="radio"] 
+{
+  display: flex;
+  position: absolute;
+  opacity: 0;
+}
+
+.radio {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #2e83aa;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  transform: translateZ(-25px);
+  transition: all 0.3s ease-in-out;
+}
+
+.radio::before {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  left: 5px;
+  border-radius: 50%;
+  background-color: #71c9e4;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.radio-button input[type="radio"]:checked + .radio {
+  border-color: #5cb85c;
+  transform: translateZ(0px);
+  background-color: #71c9e4;
+;
+}
+
+.radio-button input[type="radio"]:checked + .radio::before {
+  opacity: 1;
+}
+
+
+</style>
+<body>
+    <br><br>
+    <div class="container">
+  <input class="input" name="text" type="text" required="">
+  <label class="label">CPF</label>
+</div>
+<br><br>
+    <div class="container">
+  <input class="input" name="text" type="text" required="">
+  <label class="label">Nome</label>
+  <div class="nometelefone">
+  <br>
+    <div class="container">
+  <input class="input" name="text" type="text" required="">
+  <label class="label">Telefone</label>
+</div>
+</div>
+</div>
+<br><br>
+    <div class="container">
+  <input class="input" name="text" type="text" required="">
+  <label class="label">Data de nascimento</label>
+  <div class="sexo">Sexo
+  <label class="radio-button">
+    <input value="option1" name="example-radio" type="radio">
+    <span class="radio"></span>
+    M
+  </label>
+  
+  <label class="radio-button">
+    <input value="option2" name="example-radio" type="radio">
+    <span class="radio"></span>
+    F
+  </label>
+</div>
+</div>
+<br><br>
+    <div class="container">
+  <input class="input" name="text" type="text" required="">
+  <label class="label">Endereço</label>
+  <br>
+    <div class="container">
+  <input class="input" name="text" type="text" required="">
+  <label class="label">Bairro</label>
+</div>
+</div>
+<br><br>
+    <div class="container">
+  <input class="input" name="text" type="text" required="">
+  <label class="label">Cidade</label>
+  <br>
+  
+    <div class="container">
+  <input class="input" name="text" type="text" required="">
+  <label class="label">Estado</label>
+</div>
+</div>  
+<button class="">
+
+</button>
+</body>
+</html>
